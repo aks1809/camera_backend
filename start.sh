@@ -1,4 +1,5 @@
 #!/bin/bash
-pm2-runtime "yarn dev"
+yarn dev &
+serve -s build &
 wait -n  
 exit $?
