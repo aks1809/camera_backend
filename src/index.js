@@ -13,7 +13,7 @@ middlewaresConfig(app);
 
 app.get('/capture', (req, res) => {
   execSync('python3 scripts/camera.py');
-  const filepath = `/home/poop/frinks/skh/camera_backend/images/upload.bmp`;
+  const filepath = `/camera_backend/images/upload.bmp`;
   const imageAsBase64 = fs.readFileSync(filepath, 'base64');
   res.send(imageAsBase64);
 });
