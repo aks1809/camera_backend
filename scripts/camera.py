@@ -1,10 +1,12 @@
 import cv2
 
-cam = cv2.VideoCapture(2)
+cam = cv2.VideoCapture(0)
 
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, 3000)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 3000)
 cam.set(cv2.CAP_PROP_EXPOSURE, 250)
+
+BASE_PATH = "/home/user/frinks/camera_backend"
 
 # cv2.namedWindow('test', cv2.WINDOW_NORMAL)
 
@@ -23,9 +25,7 @@ while True:
     #     break
     # elif k % 256 == 32:
         # SPACE pressed
-    # cv2.imwrite(
-    #         "/home/user/frinks/skh/camera_backend/images/upload.bmp", frame)
-    cv2.imwrite("/home/user/frinks/camera_backend/images/upload.bmp", frame)
-    # break
+    cv2.imwrite(f"{BASE_PATH}/images/upload.bmp", frame)
+    break
 
 cam.release()

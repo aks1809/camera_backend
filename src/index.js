@@ -6,6 +6,8 @@ import { execSync } from 'child_process';
 import middlewaresConfig from './config/middleware';
 import constants from './config/constants';
 
+const BASE_PATH = '/home/user/frinks/camera_backend';
+
 const app = express();
 const httpServer = createServer(app);
 
@@ -13,7 +15,7 @@ middlewaresConfig(app);
 
 app.get('/capture', (req, res) => {
   execSync('python3 scripts/camera.py');
-  const filepath = `/home/user/frinks/camera_backend/images/upload.bmp`;
+  const filepath = `${BASE_PATH}/images/upload.bmp`;
   const imageAsBase64 = fs.readFileSync(filepath, 'base64');
   res.send(imageAsBase64);
 });
