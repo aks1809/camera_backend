@@ -1,4 +1,5 @@
 import cv2
+import time
 
 cam = cv2.VideoCapture(2)
 
@@ -26,6 +27,7 @@ while True:
     # elif k % 256 == 32:
         # SPACE pressed
     cv2.imwrite(f"{BASE_PATH}/images/upload.bmp", frame)
+    time.sleep(2)
     break
 
 cam.release()
