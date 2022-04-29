@@ -6,7 +6,7 @@ import { execSync } from 'child_process';
 import middlewaresConfig from './config/middleware';
 import constants from './config/constants';
 
-const BASE_PATH = '/home/poop/frinks/skh/camera_backend';
+const BASE_PATH = '/home/user/frinks/camera_backend';
 
 const app = express();
 const httpServer = createServer(app);
