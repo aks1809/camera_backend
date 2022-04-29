@@ -6,7 +6,7 @@ cam.set(cv2.CAP_PROP_FRAME_WIDTH, 3000)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 3000)
 cam.set(cv2.CAP_PROP_EXPOSURE, 250)
 
-BASE_PATH = "/home/user/frinks/camera_backend"
+BASE_PATH = "/home/poop/frinks/skh/camera_backend"
 
 # cv2.namedWindow('test', cv2.WINDOW_NORMAL)
 
