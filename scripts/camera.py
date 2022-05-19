@@ -1,7 +1,7 @@
 import cv2
 import time
 
-cam = cv2.VideoCapture(2)
+cam = cv2.VideoCapture(0)
 
 cam.set(cv2.CAP_PROP_FRAME_WIDTH, 3000)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 3000)
